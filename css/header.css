@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 140px;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+.logo {
+    width: 200px;
+}
+
+.header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-menu a {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    padding: 10px 20px;
+    align-self: center;
+}

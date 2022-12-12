@@ -1,0 +1,13 @@
+body {
+    display: grid;
+    gap: 80px;
+    font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+img {
+    display: block;
+}
