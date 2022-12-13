@@ -30,10 +30,22 @@
 
 .sortear .preco {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
     font-weight: 500;
     font-size: 24px;
+}
+
+.titulo {
+    justify-self: end;
+}
+
+.sortear .subtitulo {
+    text-align: right;
+}
+
+.sortear .descricao {
+    text-align: right;
 }
 
 @media (max-width: 880px) {
@@ -41,5 +53,16 @@
         display: grid;
         grid-template-columns: 1fr;
         margin: 0px 40px;
+    }
+    .titulo {
+        justify-self: start;
+    }
+    
+    .sortear .subtitulo {
+        text-align: left;
+    }
+    
+    .sortear .descricao {
+        text-align: left;
     }
 }

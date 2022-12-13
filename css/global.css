@@ -22,12 +22,9 @@ img {
     font-weight: 700;
 }
 
-
 .titulo {
     display: flex;
     gap: 10px;
-    justify-self: end;
-    
 }
 
 .titulo h1 {
@@ -40,7 +37,6 @@ img {
     font-size: 20px;
     font-weight: 300;
     color: #4A4A4A;
-    text-align: right;
 }
 
 .titulo-subtitulo {
@@ -52,7 +48,6 @@ img {
     font-size: 24px;
     font-weight: 400;
     color: #494949;
-    text-align: right;
 }
 
 .pato {
@@ -61,7 +56,7 @@ img {
 
 .pato img{
     position:absolute;
-    bottom: 40px;
-    left: 40px;
-    width: calc(100% - 80px);
+    bottom: 60px;
+    left: 60px;
+    width: calc(100% - 120px);
 }
