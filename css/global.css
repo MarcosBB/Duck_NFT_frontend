@@ -2,6 +2,7 @@ body {
     display: grid;
     gap: 80px;
     font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+    justify-items: center;
 }
 
 h1 {
@@ -10,4 +11,13 @@ h1 {
 
 img {
     display: block;
+}
+
+.botao {
+    align-items: center;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
 }
