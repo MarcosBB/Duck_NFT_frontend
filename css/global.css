@@ -61,7 +61,7 @@ img {
 
 .pato img{
     position:absolute;
-    bottom: 20px;
-    left: 20px;
-    width: calc(100% - 40px);
+    bottom: 40px;
+    left: 40px;
+    width: calc(100% - 80px);
 }
