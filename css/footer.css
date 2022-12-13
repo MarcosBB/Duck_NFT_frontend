@@ -1,0 +1,33 @@
+.rodape {
+    width: 100%;
+    background-color: #000;
+}
+
+.rodape .rodape-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    color: #fff;
+    padding: 40px 0px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0px 140px;
+}
+
+.rodape span {
+    font-weight: 700;
+}
+
+.rodape .logo-branca {
+    justify-self: end;
+    width: 200px;
+}
+
+@media (max-width: 880px) {
+    .rodape .rodape-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 0px 40px;
+    }
+}
