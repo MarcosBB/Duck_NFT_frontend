@@ -6,6 +6,7 @@
 .rodape .rodape-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    gap: 40px; 
     color: #fff;
     padding: 40px 0px;
     text-align: left;
