@@ -1,6 +1,8 @@
 .rodape {
+    display: grid;
     width: 100%;
     background-color: #000;
+    justify-items: center;
 }
 
 .rodape .rodape-container {
@@ -13,6 +15,8 @@
     font-weight: 400;
     font-size: 20px;
     margin: 0px 140px;
+    width: calc(100% - 280px);
+    max-width: 1160px;
 }
 
 .rodape span {
