@@ -1,197 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="img/icons/favicon.svg" type="image/x-icon" />
-    <script src="src/integracao.js"></script>
-    <title>Duck NFT</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="img/icons/favicon.svg" type="image/x-icon" />
+  <script src="src/integracao.js"></script>
+  <script type="module">
+    import {ethers} from "https://cdn.ethers.io/lib/ethers-5.2.esm.min.js";
+
+    console.log('test')
+
+  </script>
+  <title>Duck NFT</title>
 </head>
+
 <body>
-    <header class="header">
-        <div>
-            <img class="logo" src="img/icons/Logo_duck_NFT.svg" alt="Duck NFT">
-            <nav>
-                <ul class="header-menu">
-                    <li><a href="#sortear">Sortear</a></li>
-                    <li><a class="header-menu-last-item" href="#escolher">Escolher</a></li>
-                </ul>
-            </nav>
+  <header class="header">
+    <div>
+      <img class="logo" src="img/icons/Logo_duck_NFT.svg" alt="Duck NFT">
+      <nav>
+        <ul class="header-menu">
+          <li><a href="#sortear">Sortear</a></li>
+          <li><a class="header-menu-last-item" href="#escolher">Escolher</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="sortear" id="sortear">
+      <div class="sortear-informacoes">
+        <div class="titulo-subtitulo">
+          <div class="titulo">
+            <img src="img/icons/shuffle.svg" alt="">
+            <h1>Sortear</h1>
+          </div>
+          <p class="subtitulo">Compre um pato aleatório</p>
         </div>
-    </header>
-
-    <main>
-        <article class="sortear" id="sortear">
-            <div class="sortear-informacoes">
-                <div class="titulo-subtitulo">
-                    <div class="titulo">
-                        <img src="img/icons/shuffle.svg" alt="">
-                        <h1>Sortear</h1>
-                    </div>
-                    <p class="subtitulo">Compre um pato aleatório</p>
-                </div>
-                <p class="descricao">
-                    Sorteie uma nft de pato aleatória exclusiva. Mais barato que comprar
-                    um pato pré-determinado. Surpreenda-se com as possibilidades. 
-                </p>
-            </div>
-            <div class="sorteio-produto">
-                <div class="pato">
-                    <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
-                    <img class="pe" src="img/patos/Foot/Boots.png" alt="">
-                    <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
-                    <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
-                    <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
-                    <img class="asa" src="img/patos/Wing/Sword.png" alt="">
-                </div>
-                <p class="preco">0,02 ETH</p>
-                <button class="botao" id="botao-sortear" onclick="botaoSortear()">Sortear</button>
-            </div>
-        </article>
-
-        <article class="escolher" id="escolher">
-            <div class="escolher-primeira-linha" class="escolher-linhas">
-                <div class="escolher-produtos">
-                    <div class="pato">
-                        <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
-                        <img class="pe" src="img/patos/Foot/Boots.png" alt="">
-                        <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
-                        <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
-                        <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
-                        <img class="asa" src="img/patos/Wing/Sword.png" alt="">
-                    </div>
-                    <p class="preco">0,02 ETH</p>
-                    <a class="botao" href="">Sortear</a>
-                </div>
-                <div class="escolher-produtos">
-                    <div class="pato">
-                        <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
-                        <img class="pe" src="img/patos/Foot/Boots.png" alt="">
-                        <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
-                        <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
-                        <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
-                        <img class="asa" src="img/patos/Wing/Sword.png" alt="">
-                    </div>
-                    <p class="preco">0,02 ETH</p>
-                    <a class="botao" href="">Sortear</a>
-                </div>
-                <div class="escolher-informacoes">
-                    <div class="titulo">
-                        <img src="img/icons/pointer.svg" alt="">
-                        <h1>Escolher</h1>
-                    </div>
-                    <p class="subtitulo">Compre um pato à sua escolha </p>
-                    <p class="descricao">
-                        Se você é uma pessoa azarada não precisa se contar com a sorte. 
-                        Você pode comprar um pato específico à sua escolha por aqui 
-                        também.
-                    </p>
-                </div>
-            </div>
-
-            <div class="escolher-outras-linhas">
-                <div class="escolher-produtos">
-                    <div class="pato">
-                        <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
-                        <img class="pe" src="img/patos/Foot/Boots.png" alt="">
-                        <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
-                        <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
-                        <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
-                        <img class="asa" src="img/patos/Wing/Sword.png" alt="">
-                    </div>
-                    <p class="preco">0,02 ETH</p>
-                    <a class="botao" href="">Sortear</a>
-                </div>
-                <div class="escolher-produtos">
-                    <div class="pato">
-                        <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
-                        <img class="pe" src="img/patos/Foot/Boots.png" alt="">
-                        <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
-                        <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
-                        <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
-                        <img class="asa" src="img/patos/Wing/Sword.png" alt="">
-                    </div>
-                    <p class="preco">0,02 ETH</p>
-                    <a class="botao" href="">Sortear</a>
-                </div>
-                <div class="escolher-produtos">
-                    <div class="pato">
-                        <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
-                        <img class="pe" src="img/patos/Foot/Boots.png" alt="">
-                        <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
-                        <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
-                        <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
-                        <img class="asa" src="img/patos/Wing/Sword.png" alt="">
-                    </div>
-                    <p class="preco">0,02 ETH</p>
-                    <a class="botao" href="">Sortear</a>
-                </div>
-                <div class="escolher-produtos">
-                    <div class="pato">
-                        <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
-                        <img class="pe" src="img/patos/Foot/Boots.png" alt="">
-                        <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
-                        <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
-                        <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
-                        <img class="asa" src="img/patos/Wing/Sword.png" alt="">
-                    </div>
-                    <p class="preco">0,02 ETH</p>
-                    <a class="botao" href="">Sortear</a>
-                </div>
-                <div class="escolher-produtos">
-                    <div class="pato">
-                        <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
-                        <img class="pe" src="img/patos/Foot/Boots.png" alt="">
-                        <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
-                        <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
-                        <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
-                        <img class="asa" src="img/patos/Wing/Sword.png" alt="">
-                    </div>
-                    <p class="preco">0,02 ETH</p>
-                    <a class="botao" href="">Sortear</a>
-                </div>
-                <div class="escolher-produtos">
-                    <div class="pato">
-                        <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
-                        <img class="pe" src="img/patos/Foot/Boots.png" alt="">
-                        <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
-                        <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
-                        <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
-                        <img class="asa" src="img/patos/Wing/Sword.png" alt="">
-                    </div>
-                    <p class="preco">0,02 ETH</p>
-                    <a class="botao" href="">Sortear</a>
-                </div>
-                <div class="escolher-produtos">
-                    <div class="pato">
-                        <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
-                        <img class="pe" src="img/patos/Foot/Boots.png" alt="">
-                        <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
-                        <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
-                        <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
-                        <img class="asa" src="img/patos/Wing/Sword.png" alt="">
-                    </div>
-                    <p class="preco">0,02 ETH</p>
-                    <a class="botao" href="">Sortear</a>
-                </div>
-                
-            </div>
-        </article>
-    </main>
-
-    <footer class="rodape">
-        <div class="rodape-container">
-            <div class="rodape-descricao">
-                <p>Duck NFT Todos os direitos reservados.</p>
-                </br>
-                <p>Criado por <span>Marcos Beraldo</span> e <span>Matheus Saraiva</span>.</p>
-                <p>Todas as artes foram feitas por <span>Matheus Saraiva</span>.</p>
-            </div>
-            <img class="logo-branca" src="img/icons/Logo_duck_NFT_white.svg" alt="Duck NFT">
+        <p class="descricao">
+          Sorteie uma nft de pato aleatória exclusiva. Mais barato que comprar
+          um pato pré-determinado. Surpreenda-se com as possibilidades.
+        </p>
+      </div>
+      <div class="sorteio-produto">
+        <div class="pato">
+          <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
+          <img class="pe" src="img/patos/Foot/Boots.png" alt="">
+          <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
+          <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
+          <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
+          <img class="asa" src="img/patos/Wing/Sword.png" alt="">
         </div>
-    </footer>
+        <p class="preco">0,02 ETH</p>
+        <button class="botao" id="botao-sortear" onclick="botaoSortear()">Sortear</button>
+      </div>
+    </article>
+
+    <article class="escolher" id="escolher">
+      <div class="escolher-primeira-linha" class="escolher-linhas">
+        <div class="escolher-produtos">
+          <div class="pato">
+            <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
+            <img class="pe" src="img/patos/Foot/Boots.png" alt="">
+            <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
+            <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
+            <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
+            <img class="asa" src="img/patos/Wing/Sword.png" alt="">
+          </div>
+          <p class="preco">0,02 ETH</p>
+          <a class="botao" href="">Sortear</a>
+        </div>
+        <div class="escolher-produtos">
+          <div class="pato">
+            <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
+            <img class="pe" src="img/patos/Foot/Boots.png" alt="">
+            <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
+            <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
+            <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
+            <img class="asa" src="img/patos/Wing/Sword.png" alt="">
+          </div>
+          <p class="preco">0,02 ETH</p>
+          <a class="botao" href="">Sortear</a>
+        </div>
+        <div class="escolher-informacoes">
+          <div class="titulo">
+            <img src="img/icons/pointer.svg" alt="">
+            <h1>Escolher</h1>
+          </div>
+          <p class="subtitulo">Compre um pato à sua escolha </p>
+          <p class="descricao">
+            Se você é uma pessoa azarada não precisa se contar com a sorte.
+            Você pode comprar um pato específico à sua escolha por aqui
+            também.
+          </p>
+        </div>
+      </div>
+
+      <div class="escolher-outras-linhas">
+        <div class="escolher-produtos">
+          <div class="pato">
+            <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
+            <img class="pe" src="img/patos/Foot/Boots.png" alt="">
+            <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
+            <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
+            <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
+            <img class="asa" src="img/patos/Wing/Sword.png" alt="">
+          </div>
+          <p class="preco">0,02 ETH</p>
+          <a class="botao" href="">Sortear</a>
+        </div>
+        <div class="escolher-produtos">
+          <div class="pato">
+            <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
+            <img class="pe" src="img/patos/Foot/Boots.png" alt="">
+            <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
+            <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
+            <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
+            <img class="asa" src="img/patos/Wing/Sword.png" alt="">
+          </div>
+          <p class="preco">0,02 ETH</p>
+          <a class="botao" href="">Sortear</a>
+        </div>
+        <div class="escolher-produtos">
+          <div class="pato">
+            <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
+            <img class="pe" src="img/patos/Foot/Boots.png" alt="">
+            <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
+            <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
+            <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
+            <img class="asa" src="img/patos/Wing/Sword.png" alt="">
+          </div>
+          <p class="preco">0,02 ETH</p>
+          <a class="botao" href="">Sortear</a>
+        </div>
+        <div class="escolher-produtos">
+          <div class="pato">
+            <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
+            <img class="pe" src="img/patos/Foot/Boots.png" alt="">
+            <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
+            <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
+            <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
+            <img class="asa" src="img/patos/Wing/Sword.png" alt="">
+          </div>
+          <p class="preco">0,02 ETH</p>
+          <a class="botao" href="">Sortear</a>
+        </div>
+        <div class="escolher-produtos">
+          <div class="pato">
+            <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
+            <img class="pe" src="img/patos/Foot/Boots.png" alt="">
+            <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
+            <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
+            <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
+            <img class="asa" src="img/patos/Wing/Sword.png" alt="">
+          </div>
+          <p class="preco">0,02 ETH</p>
+          <a class="botao" href="">Sortear</a>
+        </div>
+        <div class="escolher-produtos">
+          <div class="pato">
+            <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
+            <img class="pe" src="img/patos/Foot/Boots.png" alt="">
+            <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
+            <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
+            <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
+            <img class="asa" src="img/patos/Wing/Sword.png" alt="">
+          </div>
+          <p class="preco">0,02 ETH</p>
+          <a class="botao" href="">Sortear</a>
+        </div>
+        <div class="escolher-produtos">
+          <div class="pato">
+            <img class="rabo" src="img/patos/Tail/DuckTail.png" alt="">
+            <img class="pe" src="img/patos/Foot/Boots.png" alt="">
+            <img class="corpo" src="img/patos/Body/DuckBody.png" alt="">
+            <img class="cabeca" src="img/patos/Head/Fedora.png" alt="">
+            <img class="bico" src="img/patos/Bill/Mustache.png" alt="">
+            <img class="asa" src="img/patos/Wing/Sword.png" alt="">
+          </div>
+          <p class="preco">0,02 ETH</p>
+          <a class="botao" href="">Sortear</a>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-container">
+      <div class="rodape-descricao">
+        <p>Duck NFT Todos os direitos reservados.</p>
+        </br>
+        <p>Criado por <span>Marcos Beraldo</span> e <span>Matheus Saraiva</span>.</p>
+        <p>Todas as artes foram feitas por <span>Matheus Saraiva</span>.</p>
+      </div>
+      <img class="logo-branca" src="img/icons/Logo_duck_NFT_white.svg" alt="Duck NFT">
+    </div>
+  </footer>
 </body>
+
 </html>
