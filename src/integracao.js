@@ -1,8 +1,37 @@
-const connectWallet = async () => {
+
+/*const connectWallet = async () => {
 
   const { ethereum } = window;
+  let accounts = null;
   if (!ethereum) {
     alert('Carteira digital não conectada.');
+    accounts = await ethereum.request({ method: "eth_requestAccounts" });
+  } else {
+    accounts = await ethereum.request({ method: "eth_accounts" });
+  }
+  console.log(accounts);
+}*/
+
+const connectWallet = async () => {
+  if (window.ethereum) {
+    try {
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      //setAccounts(accounts);
+      const provider = new ethers.providers.Web3Provider(ethereum)
+      const walletAddress = accounts[0]    // first account in MetaMask
+      const signer = provider.getSigner(walletAddress)
+      const duckContract = new ethers.Contract("0xfA3fB0897AB1EE7934dddE88571644a0DC3101c30xfA3fB0897AB1EE7934dddE88571644a0DC3101c3", abi, signer)
+
+      const mercadoPato1 = await duckContract.ducks(1)
+      console.log(mercadoPato1)
+
+    } catch (error) {
+      if (error.code === 4001) {
+        // User rejected request
+      }
+
+      console.log(error)
+    }
   }
 }
 
@@ -118,7 +147,7 @@ var abi = [
 
 
 //var DuckFactoryContract = web3.eth.contract(abi)
-var contractAddress = "0xfA3fB0897AB1EE7934dddE88571644a0DC3101c3"/* our contract address on Ethereum after deploying */
+//var contractAddress = "0xfA3fB0897AB1EE7934dddE88571644a0DC3101c3"/* our contract address on Ethereum after deploying */
 //var DuckFactory = DuckFactoryContract.at(contractAddress)
 // `DuckFactory` has access to our contract's public functions and events
 
