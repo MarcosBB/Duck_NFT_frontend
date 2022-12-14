@@ -124,8 +124,11 @@ function botaoSortear() {
   console.log("Sorteando patinho...")
   var name = "patinho"
   // Call our contract's `createRandomDuck` function:
-  DuckFactory.createRandomDuck(name)
+  DuckFactory.createRandomDuck(name).call();
 }
+
+//retorna um pato
+var patoMercado = DuckFactory.ducks(0).call();
 
 // Listen for the `NewDuck` event, and update the UI
 var event = DuckFactory.NewDuck(function(error, result) {
