@@ -33,15 +33,18 @@
     padding-right: 0px;
 }
 
-@media (max-width: 701px) {
+@media (max-width: 880px) {
+    .header {
+        width: calc(100% - 80px);
+    }
+}
+
+@media (max-width: 600px) {
     .header div{
         display: block;
         align-items: center;
         font-weight: 600;
         margin-top: 40px;
     }
-    .header {
-        width: calc(100% - 80px);
-        max-width: 1160px;
-    }
+    
 }

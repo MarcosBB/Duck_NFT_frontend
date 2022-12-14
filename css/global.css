@@ -5,6 +5,13 @@ body {
     justify-items: center;
 }
 
+main{
+    display: grid;
+    gap: 80px;
+    width: 100%;
+    justify-items: center;
+}
+
 h1 {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }

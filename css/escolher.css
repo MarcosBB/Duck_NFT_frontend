@@ -1,0 +1,44 @@
+.escolher {
+    display: grid;
+    gap: 40px;
+    max-width: 1160px;
+}
+.escolher-primeira-linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 40px;
+}
+
+.escolher-outras-linhas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.escolher-produtos{
+    background-color: #D9D9D9;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    max-height: 260px;
+    margin-bottom: 26px;
+}
+
+.escolher .botao {
+    position: absolute;
+    bottom: -55px;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+
+.escolher .preco {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.escolher{
+    margin: 0px 140px
+}
