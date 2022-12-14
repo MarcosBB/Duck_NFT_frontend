@@ -17,6 +17,7 @@
     gap: 40px;
 }
 
+
 .escolher-produtos{
     background-color: #D9D9D9;
     width: 100%;
@@ -50,4 +51,37 @@
     display: grid;
 }
 
+
+@media (max-width: 1220px) {
+    .escolher-outras-linhas {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .escolher-primeira-linha {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1050px) {
+    .escolher-outras-linhas {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .escolher-primeira-linha {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .escolher-outras-linhas {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 880px) {
+    .escolher {
+        margin: 0px 40px;
+    }
+}
 
