@@ -9,4 +9,4 @@ Trata-se do projeto final da disciplina de Blockchain e aplicações descentrali
 
 ## Links
 - [Especificações do projeto final da disciplina](https://github.com/danilocurvelo/imd0913-2022/tree/main/projeto-final-dapp)
-- [Smart contract do Duck NFT]()
+<!-- - [Smart contract do Duck NFT]() -->
