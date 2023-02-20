@@ -15,10 +15,10 @@ Como se trata de apenas um projeto para a disciplina e como portfolio o pagament
 
 
 ## Links
-- **[Acessar protótipo no figma](https://www.figma.com/file/bSkSxT9lQac0pXWBf9GCNG/Duck-nft?node-id=0%3A1&t=1P5FJAxe9DJ4g5Kn-1)**
+- **[Acessar protótipo no figma](https://www.figma.com/proto/bSkSxT9lQac0pXWBf9GCNG/Duck-nft?node-id=1%3A3&scaling=min-zoom&page-id=0%3A1)**
 - **[Especificações do projeto final da disciplina](https://github.com/danilocurvelo/imd0913-2022/tree/main/projeto-final-dapp)**
 <!-- - [Smart contract do Duck NFT]() -->
 
 ## Devs
-- **Marcos Beraldo Barros** 
-- **Matheus Saraiva Alves De Araujo Lima**
+- [**Marcos Beraldo Barros**](https://github.com/MarcosBB)
+- [**Matheus Saraiva Alves De Araujo Lima**](https://github.com/matsaraiva)
